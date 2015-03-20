@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding='utf-8'?>
+<module>
+	<public>
+		<!-- uap demo service -->
+		<component remote="true" singleton="true" tx="CMT">
+			<interface>uap.sample.ISampleService</interface>
+			<implementation>uap.sample.SampleServiceImpl</implementation>
+			<extension class="nc.uap.ws.deploy.OxbWSExtensionProcessor">
+				<wsdl>/uap/sample/ISampleService.wsdl</wsdl>
+				<address>/uap.sample.ISampleService</address>
+			</extension>
+		</component>
+	</public>
+</module>
