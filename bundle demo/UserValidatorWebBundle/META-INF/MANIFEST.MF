@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UserValidatorWebBundle
+Bundle-SymbolicName: UserValidatorWebBundle
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.uu.demo.UserValidatorWebActivator
+Bundle-Vendor: UU
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework;version="1.3.0",
+ org.osgi.service.http;version="1.2.1",
+ org.uu.demo.service.user
+Require-Bundle: javax.servlet;bundle-version="2.5.0"

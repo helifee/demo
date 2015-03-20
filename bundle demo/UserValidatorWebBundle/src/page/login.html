@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>OSGI Opendoc Demo</TITLE>
+<meta http-equiv="Content-Type" content="text/html;charset=GBK" /> 
+<script>
+
+	function login(){
+		if(document.frmLogin.username.value==""){
+			alert("必须输入用户名");
+			document.frmLogin.username.focus();
+			return;
+		}
+		if(document.frmLogin.userpass.value==""){
+			alert("必须输入密码");
+			document.frmLogin.userpass.focus();
+			return;
+		}
+		document.frmLogin.submit();
+	}
+
+</script>
+</HEAD>
+
+<BODY>
+<table style="width:45%;border:1px solid;height:100px">
+	<form name=frmLogin method="post" action="/demo/login">
+		<tr bgcolor="#C0C0C0">
+			<td colspan="2" align="center">用户登录模块示例</td>
+		</tr>
+		<tr>
+			<td width="30%">用户名</td>
+			<td><input type="text" name="username" size="30"></td>
+		</tr>
+		<tr>
+			<td>密&nbsp;&nbsp;码</td>
+			<td><input type="password" name="userpass" size="33"></td>
+		</tr>
+		<tr bgcolor="#C0C0C0">
+			<td colspan="2" align="center">
+				<input type=button name=btnSubmit value="登录" onclick="login();">
+			</td>
+		</tr>
+	</form>
+</table>
+</BODY>
+</HTML>
