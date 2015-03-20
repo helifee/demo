@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RemoteDictQuery
+Bundle-SymbolicName: RemoteDictQuery
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.ufida.remotedictquery.Activator
+Bundle-Vendor: ufida
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.ufida.dictquery.query,
+ org.osgi.framework;version="1.3.0"
