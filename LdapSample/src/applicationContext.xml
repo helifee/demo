@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--
+	<bean id="placeholderConfig"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="/WEB-INF/ldap.properties" />
+	</bean>
+	-->
+	
+	<bean id="contextSource" class="org.springframework.ldap.core.support.LdapContextSource">
+		<property name="url" value="ldap://20.10.129.175:10389" />
+		<property name="base" value="dc=yonyou,dc=com" />
+		<property name="userDn" value="uid=admin,ou=system" />
+		<property name="password" value="admin" />
+	</bean>
+
+	<bean id="ldapTemplate"
+		class="org.springframework.ldap.core.LdapTemplate">
+		<constructor-arg ref="contextSource" />
+	</bean>
+
+	<bean id="userDao" class="ldap.sample.UserDaoImpl">
+		<property name="ldapTemplate" ref="ldapTemplate" />
+	</bean>
+
+</beans>
