@@ -1,0 +1,58 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:jaxws="http://java.sun.com/xml/ns/jaxws" xmlns:ns="http://sharing.mdm07.itf.yonyou.com/IMdSharingThirdPartService" xmlns:ns0="http://sharing.mdm07.itf.yonyou.com/IMdSharingThirdPartService" xmlns:outerSystemRetVO="http://sharing.mdm07.itf.yonyou.com/OuterSystemRetVO" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" attributeFormDefault="unqualified" elementFormDefault="qualified" jaxb:version="2.0" targetNamespace="http://sharing.mdm07.itf.yonyou.com/IMdSharingThirdPartService">
+    <xsd:annotation>
+        <xsd:documentation source="eip_version">63</xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://sharing.mdm07.itf.yonyou.com/OuterSystemRetVO" schemaLocation="../../../../../com/yonyou/itf/mdm07/sharing/OuterSystemRetVO.xsd"/>
+    <xsd:element name="getRemoteMdCount" type="ns:getRemoteMdCount"/>
+    <xsd:element name="getRemoteMdCountResponse" type="ns:getRemoteMdCountResponse"/>
+    <xsd:element name="loadMd" type="ns:loadMd"/>
+    <xsd:element name="loadMdResponse" type="ns:loadMdResponse"/>
+    <xsd:element name="loadMdBatch" type="ns:loadMdBatch"/>
+    <xsd:element name="loadMdBatchResponse" type="ns:loadMdBatchResponse"/>
+    <xsd:element name="distributeMd" type="ns:distributeMd"/>
+    <xsd:element name="distributeMdResponse" type="ns:distributeMdResponse"/>
+    <xsd:complexType name="loadMdBatchResponse">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="return" type="outerSystemRetVO:OuterSystemRetVO"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="loadMdBatch">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="string0" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="int1" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="int2" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getRemoteMdCount">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="string0" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="distributeMdResponse">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="return" type="outerSystemRetVO:OuterSystemRetVO"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="loadMd">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="string0" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="distributeMd">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="string0" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="string1" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="string2" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getRemoteMdCountResponse">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="return" type="outerSystemRetVO:OuterSystemRetVO"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="loadMdResponse">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="return" type="outerSystemRetVO:OuterSystemRetVO"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
